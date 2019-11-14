@@ -1,10 +1,10 @@
-image: node:latest
+image: circleci/node:8.11.3
 pages:
   stage: deploy
   script:
   script:
   - npm install -g @angular/cli
-  - npm install node-sass
+  - npm rebuild node-sass
   - npm install
   - ng build
   - mv dist/echoes-player/* public/
