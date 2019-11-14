@@ -1,0 +1,14 @@
+<article>
+  <app-navbar
+    [header]="'Mi Perfil - Mis Playlists'"
+    [headerIcon]="'heart-o'">
+  </app-navbar>
+  <p *ngIf="!(isSignedIn$ | async)" class="well lead">
+    Para ver Tus Play List deberás iniciar sesion
+    <button class="btn btn-lg btn-primary"
+      (click)="signInUser()">
+      <icon name="google"></icon> Ingresar
+    </button>
+  </p>
+  <router-outlet></router-outlet>
+</article>
