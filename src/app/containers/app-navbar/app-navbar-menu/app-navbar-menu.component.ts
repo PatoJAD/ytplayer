@@ -24,41 +24,7 @@ enum Key {
 @Component({
   selector: 'app-navbar-menu',
   animations: [expandFadeInAnimation],
-  template: `
-    <button class="btn btn-navbar btn-transparent ux-maker btn-toggle"
-      (click)="toggleMenu()">
-      <icon name="ellipsis-v"></icon>
-      <icon *ngIf="appVersion.isNewAvailable" name="dot-circle-o" class="pulse update-indicator text-primary"></icon>
-    </button>
-    <div class="menu-backdrop" *ngIf="!hide" (click)="hideMenu()"></div>
-    <div class="panel menu-dropdown"
-      [class.end-animation]="end"
-      [@expandFadeIn]="menuState"
-      (@expandFadeIn.done)="endAnimation($event)"
-      >
-      <div class="list-group">
-        <div *ngIf="appVersion.isNewAvailable" class="list-group-item">
-          <button class="btn btn-success" title="click to update Echoes"
-            (click)="handleVersionUpdate()">
-            New Version Is Available - UPDATE NOW
-          </button>
-        </div>
-        <a class="list-group-item" href="https://github.com/orizens/echoes-player" target="_blank" rel="noopener">
-          <icon name="github" prefix="${ICON_PREFIX_BRAND}"></icon> Source Code @Github
-        </a>
-        <div class="list-group-item">
-          <icon name="paint-brush" class="text-primary"></icon> Theme:
-          <button-group [buttons]="theme.themes" [selectedButton]="theme.selected"
-            (buttonClick)="updateTheme($event)"></button-group>
-        </div>
-        <button class="list-group-item"
-          *ngIf="signedIn"
-          (click)="handleSignOut()">
-          <icon name="sign-out"></icon> Sign Out
-        </button>
-      </div>
-    </div>
-  `,
+  template: './app-navbar-menu.component.html',
   styleUrls: ['./app-navbar-menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
