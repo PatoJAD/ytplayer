@@ -1,0 +1,13 @@
+<a class="btn btn-link navbar-link navbar-btn"
+  *ngIf="signedIn; else userNotSignedIn"
+  [routerLink]="['/user']">
+  <img [src]="userImageUrl" class="user-icon">
+</a>
+
+<ng-template #userNotSignedIn>
+  <span class="btn btn-link navbar-link navbar-btn"
+    (click)="handleSignIn()">
+    <icon name="sign-in"></icon>
+    Sign In
+  </span>
+</ng-template>

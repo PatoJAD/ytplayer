@@ -16,7 +16,7 @@ import { AppApi } from '@api/app.api';
   selector: 'app-navbar',
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./app-navbar.component.scss'],
-  template: `./app-navbar.component.html`,
+  template: './app-navbar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppNavbarComponent implements OnInit {

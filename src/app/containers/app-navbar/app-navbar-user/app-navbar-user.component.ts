@@ -2,20 +2,7 @@ import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from 
 
 @Component({
   selector: 'app-navbar-user',
-  template: `
-    <a class="btn btn-link navbar-link navbar-btn"
-      *ngIf="signedIn; else userNotSignedIn"
-      [routerLink]="['/user']">
-      <img [src]="userImageUrl" class="user-icon">
-    </a>
-    <ng-template #userNotSignedIn>
-      <span class="btn btn-link navbar-link navbar-btn"
-        (click)="handleSignIn()">
-        <icon name="sign-in"></icon>
-        Sign In
-      </span>
-    </ng-template>
-  `,
+  template: './app-navbar-user.component.html',
   styleUrls: ['./app-navbar-user.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
