@@ -8,7 +8,7 @@ import {
 @Component({
   selector: 'loader',
   styleUrls: ['./loading-indicator.component.scss'],
-  template: './loading-indicator.component.html',
+  templateUrl: './loading-indicator.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoadingIndicatorComponent {
