@@ -24,7 +24,7 @@ enum Key {
 @Component({
   selector: 'app-navbar-menu',
   animations: [expandFadeInAnimation],
-  template: './app-navbar-menu.component.html',
+  templateUrl: './app-navbar-menu.component.html',
   styleUrls: ['./app-navbar-menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

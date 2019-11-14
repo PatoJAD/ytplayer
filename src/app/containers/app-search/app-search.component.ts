@@ -9,7 +9,7 @@ import * as fromPlayerSearch from '@core/store/player-search';
 @Component({
   selector: 'app-search',
   styleUrls: ['./app-search.component.scss'],
-  template: './app-search.component.scss'
+  templateUrl: './app-search.component.html'
 })
 export class AppSearchComponent implements OnInit {
   query$ = this.store.pipe(select(fromPlayerSearch.getQuery));

@@ -8,7 +8,7 @@ import {
 
 @Component({
   selector: 'app-navbar-user',
-  template: './app-navbar-user.component.html',
+  templateUrl: './app-navbar-user.component.html',
   styleUrls: ['./app-navbar-user.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
