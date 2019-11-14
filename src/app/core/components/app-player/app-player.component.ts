@@ -17,42 +17,8 @@ import { AppPlayerApi } from '@api/app-player.api';
 
 @Component({
   selector: 'app-player',
-  styleUrls: ['./app-player.scss'],
-  template: `
-  <section
-    [class.show-youtube-player]="isShowPlayer$ | async"
-    [class.fullscreen]="(isPlayerFullscreen$ | async).on">
-    <div class="yt-player ux-maker">
-      <player-resizer
-        (toggle)="togglePlayer()"
-        [fullScreen]="isShowPlayer$ | async"
-      ></player-resizer>
-      <youtube-player
-        (ready)="setupPlayer($event)"
-        (change)="updatePlayerState($event)"
-      ></youtube-player>
-    </div>
-    <div class="container">
-      <image-blur [media]="media$ | async" *ngIf="!(isPlayerFullscreen$ | async).on"></image-blur>
-      <media-info
-        [player]="player$ | async"
-        [minimized]="media$ | async"
-        (thumbClick)="toggleFullScreen()"
-        (seekTrack)="selectTrackInVideo($event)"
-      ></media-info>
-      <player-controls class="controls-container nicer-ux"
-        [isRepeat]="isPlayerInRepeat$ | async"
-        [playing]="isPlayerPlaying$ | async"
-        [media]="media$ | async"
-        (pause)="pauseVideo()"
-        (next)="playNextTrack()"
-        (play)="playVideo($event)"
-        (previous)="playPreviousTrack()"
-        (repeat)="toggleRepeat()"
-      ></player-controls>
-    </div>
-  </section>
-  `,
+  styleUrls: ['./app-player.component.scss'],
+  templateUrl: './app-player.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppPlayerComponent implements OnInit, OnDestroy {
