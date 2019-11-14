@@ -4,6 +4,7 @@ pages:
   script:
   script:
   - npm install -g @angular/cli
+  - npm install node-sass
   - npm install
   - ng build
   - mv dist/echoes-player/* public/
