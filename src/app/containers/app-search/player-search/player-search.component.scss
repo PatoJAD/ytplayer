@@ -8,7 +8,7 @@
 
 	player-search {
 		display: inline-block;
-		
+
 		.form-search {
 			float: none;
 			position: relative;
@@ -33,7 +33,7 @@
 					line-height: 3;
 				}
 			}
-			
+
 			.form-group {
 				background-color: $form-bg-color;
 				border-radius: 3px;
@@ -68,7 +68,7 @@
 }
 
 @media (min-width: 460px) {
-	player-search {	
+	player-search {
 		.form-search {
 			input.form-control {
 				display: inline-block;
@@ -79,6 +79,6 @@
 
 @media (min-width: 768px) {
 	player-search {
-		
+
 	}
 }

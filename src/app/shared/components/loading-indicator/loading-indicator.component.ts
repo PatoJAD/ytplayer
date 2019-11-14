@@ -7,12 +7,8 @@ import {
 
 @Component({
   selector: 'loader',
-  styleUrls: ['./loading-indicator.scss'],
-  template: `
-  <div class="alert alert-info">
-    <icon name="circle-o-notch spin"></icon> {{ message }}
-  </div>
-  `,
+  styleUrls: ['./loading-indicator.component.scss'],
+  template: './loading-indicator.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoadingIndicatorComponent {

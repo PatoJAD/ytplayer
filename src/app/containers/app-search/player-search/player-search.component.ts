@@ -17,29 +17,8 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'player-search',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./player-search.scss'],
-  template: `
-    <form class="navbar-form form-search" id="media-explorer"
-      [formGroup]="searchForm"
-      >
-      <div class="form-group clearfix is-flex-row">
-        <input placeholder="Buscar en YouTube..." id="media-search"
-          #mediaSearch
-          ngxTypeahead
-          [taUrl]="'//suggestqueries.google.com/complete/search'"
-          [taParams]="params"
-          [taAllowEmpty]="true"
-          (taSelected)="handleSelectSuggestion($event)"
-          type="search" class="form-control" autocomplete="off"
-          name="mediaSearch"
-          formControlName="searchInput"
-          >
-        <button class="btn btn-transparent btn-submit" tooltip="Buscar en YouTube">
-          <icon name="search"></icon>
-        </button>
-      </div>
-    </form>
-  `,
+  styleUrls: ['./player-search.component.scss'],
+  templateUrl: './player-search.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PlayerSearchComponent implements OnChanges, OnDestroy {
