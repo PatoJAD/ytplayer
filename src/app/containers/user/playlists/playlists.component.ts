@@ -5,19 +5,7 @@ import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'playlists',
-  template: `
-  <section class="videos-list">
-    <div class="list-unstyled ux-maker youtube-items-container clearfix">
-      <youtube-playlist
-        *ngFor="let playlist of playlists$ | async"
-        [media]="playlist"
-        link="/user/"
-        (play)="playSelectedPlaylist(playlist)"
-        (queue)="queueSelectedPlaylist(playlist)">
-      </youtube-playlist>
-    </div>
-  </section>
-  `
+  template: './playlists.component.html'
 })
 export class PlaylistsComponent implements OnInit {
   playlists$ = this.store.select(state => state.user.playlists);

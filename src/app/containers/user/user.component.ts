@@ -8,23 +8,8 @@ import { AppApi } from '@api/app.api';
 @Component({
   selector: 'app-user',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./user.scss'],
-  template: `
-  <article>
-    <app-navbar
-      [header]="'Mi Perfik - Mis Playlists'"
-      [headerIcon]="'heart-o'"
-    ></app-navbar>
-    <p *ngIf="!(isSignedIn$ | async)" class="well lead">
-      Para ver Tus Play List deberas iniciar sesion
-      <button class="btn btn-lg btn-primary"
-        (click)="signInUser()">
-        <icon name="google"></icon> Ingresar
-      </button>
-    </p>
-    <router-outlet></router-outlet>
-  </article>
-  `
+  styleUrls: ['./user.component.scss'],
+  template: './user.component.html'
 })
 export class UserComponent implements OnInit {
   playlists$ = this.store.select(UserProfile.getUserPlaylists);
