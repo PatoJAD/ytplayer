@@ -24,8 +24,8 @@ $navbar-new-height: 5rem;
 	z-index: 1030;
 	transition: left .3s;
 	transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-	
-	
+
+
 	&.closed {
 		left: 0;
 	}
@@ -41,7 +41,7 @@ $navbar-new-height: 5rem;
     justify-content: space-between;
     align-items: initial;
     align-self: auto;
-		
+
 		height: 100%;
 		width: $drawer-width;
 		z-index: $zindex-navbar-fixed;
@@ -88,7 +88,7 @@ $navbar-new-height: 5rem;
 			border-radius: 0;
 			border: none;
 		}
-  
+
     .sidebar-backdrop {
       z-index: 1029;
     }
@@ -96,7 +96,7 @@ $navbar-new-height: 5rem;
 }
 }
 @media (min-width: 768px) {
-:host { 
+:host {
 	left: 0;
 
   .sidebar {

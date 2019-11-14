@@ -3,19 +3,8 @@ import { AppSidebarProxy } from './app-sidebar.proxy';
 
 @Component({
   selector: 'app-sidebar',
-  styleUrls: ['./app-sidebar.scss'],
-  template: `
-  <div id="sidebar" class="sidebar ux-maker"
-    [class.closed]="sidebarCollapsed$ | async">
-    <div class="sidebar-backdrop" (click)="toggleSidebar()"></div>
-    <nav class="navbar navbar-transparent">
-      <app-brand></app-brand>
-      <app-navigator [closed]="sidebarCollapsed$ | async" [searchType]="searchType$ | async">
-      </app-navigator>
-    </nav>
-    <now-playing></now-playing>
-  </div>
-  `,
+  styleUrls: ['./app-sidebar.component.scss'],
+  templateUrl: './app-sidebar.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppSidebarComponent {
