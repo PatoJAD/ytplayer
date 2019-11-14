@@ -3,7 +3,7 @@ pages:
   stage: deploy
   script:
   script:
-  - npm install -g @angular/cli@7.2.7
+  - npm install -g @angular/cli
   - npm install
   - ng build
   - mv dist/echoes-player/* public/
