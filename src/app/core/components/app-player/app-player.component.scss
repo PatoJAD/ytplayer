@@ -50,9 +50,7 @@ $toolbar-position-on-hover: -9rem;
   .container {
     padding: 0;
     z-index: $zindex-navbar-fixed;
-    background: var(--player-controls-bar-bg)
-      url('/assets/images/developed-with-youtube-sentence-case-light.png')
-      no-repeat right center;
+    background: var(--player-controls-bar-bg);
     background-size: contain;
     position: relative;
     transition: all 0.3s;
