@@ -27,7 +27,7 @@ export class PlayerSearchComponent implements OnChanges, OnDestroy {
   @Output() search = new EventEmitter();
   // @Output() typing = new EventEmitter<string>();
 
-  @ViewChild('mediaSearch') mediaSearch;
+  @ViewChild('mediaSearch', { static: true }) mediaSearch;
 
   searchForm: FormGroup;
   formState: Subscription;
