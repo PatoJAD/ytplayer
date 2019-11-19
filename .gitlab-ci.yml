@@ -1,4 +1,4 @@
-image: appleboy/node-less:latest
+image: node:12-alpine
 pages:
   stage: deploy
   script:
