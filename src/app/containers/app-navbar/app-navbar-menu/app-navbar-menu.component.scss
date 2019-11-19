@@ -68,8 +68,8 @@
 
 .list-group-item {
   @each $theme, $color in
-  ('bumblebee', #faca0b),
-  ('halloween', #ff5722)  {
+  ('yellow', #faca0b),
+  ('orange', #ff5722)  {
     /deep/ .active.btn-value-#{$theme} {
       box-shadow: inset 0 0 2px 5px $color;
       background-color: var(--list-group-item-bg);

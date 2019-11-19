@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   sidebarCollapsed$ = this.store.pipe(select(getSidebarCollapsed));
   theme$ = this.store.select(getAppTheme);
 
-  @HostBinding('class') style = 'halloween';
+  @HostBinding('class') style = 'orange';
 
   constructor(
     private store: Store<EchoesState>,
