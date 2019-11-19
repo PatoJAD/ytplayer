@@ -5,6 +5,8 @@ pages:
   script:
   - npm install -g @angular/cli
   - npm install
+  - npm install typescript@3.5
+  - npm install -g typescript@3.5
   - ng build
   - mv dist/echoes-player/* public/
   artifacts:
