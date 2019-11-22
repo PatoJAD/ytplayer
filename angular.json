@@ -129,7 +129,7 @@
       }
     }
   },
-  "defaultProject": "echoes-player",
+  "defaultProject": "ytplayer-patojad",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
