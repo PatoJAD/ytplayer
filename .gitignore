@@ -1,10 +1,12 @@
 # compiled output
 /dist
 /tmp
+/public
 
 # dependencies
 /node_modules
 /bower_components
+package-lock.json
 
 # IDEs and editors
 /.idea
@@ -33,4 +35,3 @@ testem.log
 Thumbs.db
 
 /.vscode
-
