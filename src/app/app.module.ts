@@ -1,42 +1,57 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule, ErrorHandler } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
-
-import { CoreModule } from './core';
-import { SharedModule } from '@shared/index';
-
-import { APP_CORE_MODULES } from './core/components';
-import { APP_CONTAINER_MODULES } from './containers';
-import { ROUTES } from './app.routes';
-
+import { HttpModule } from '@angular/http';
+import { ReactiveFormsModule } from '@angular/forms';
+// Components
 import { AppComponent } from './app.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-import { AppErrorHandler } from './core/services/error-handler';
+import { MainComponent } from './main/main.component';
+import { VideosListComponent } from './main/videos-list/videos-list.component';
+import { VideosPlaylistComponent } from './main/videos-playlist/videos-playlist.component';
+import { VideosSearchComponent } from './main/videos-search/videos-search.component';
+import { VideoPlayerComponent } from './main/video-player/video-player.component';
+// Services
+import { YoutubeApiService } from './shared/services/youtube-api.service';
+import { YoutubePlayerService } from './shared/services/youtube-player.service';
+import { PlaylistStoreService } from './shared/services/playlist-store.service';
+import { NotificationService } from './shared/services/notification.service';
+import { BrowserNotificationService } from './shared/services/browser-notification.service';
+// Pipes
+import { VideoDurationPipe } from './shared/pipes/video-duration.pipe';
+import { VideoLikesViewsPipe } from './shared/pipes/video-likes-views.pipe';
+import { VideoNamePipe } from './shared/pipes/video-name.pipe';
+import { LazyScrollDirective } from './shared/directives/lazy-scroll/lazy-scroll.directive';
 
 @NgModule({
-  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    HttpClientJsonpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true }),
-    BrowserAnimationsModule,
-
-    CoreModule,
-    SharedModule,
-    ...APP_CORE_MODULES,
-    ...APP_CONTAINER_MODULES,
-
-    ServiceWorkerModule.register('/ngsw-worker.js', {
-      enabled: environment.production
-    })
+    HttpModule,
+    ReactiveFormsModule
   ],
-  providers: [{ provide: ErrorHandler, useClass: AppErrorHandler }],
-  bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    MainComponent,
+
+    VideosListComponent,
+    VideosSearchComponent,
+    VideoPlayerComponent,
+    VideosPlaylistComponent,
+
+    VideoDurationPipe,
+    VideoLikesViewsPipe,
+    VideoNamePipe,
+
+    LazyScrollDirective
+  ],
+  bootstrap: [
+    AppComponent
+  ],
+  providers: [
+    YoutubeApiService,
+    YoutubePlayerService,
+    PlaylistStoreService,
+    NotificationService,
+    BrowserNotificationService
+  ]
 })
-export class AppModule {}
+export class AppModule {
+}

@@ -1,111 +1,71 @@
-[![Build Status](https://travis-ci.org/orizens/echoes-player.svg?branch=master)](https://travis-ci.org/orizens/echoes-player) [![Code Climate](https://codeclimate.com/github/orizens/echoes-player/badges/gpa.svg)](https://codeclimate.com/github/orizens/echoes-player)
+![ngx-youtube-player-logo](https://raw.githubusercontent.com/SamirHodzic/ngx-youtube-player/master/src/assets/logo_git.png)
 
-## [Join Echoes Slack Channel](https://join.slack.com/t/echoesplayer/shared_invite/enQtMzcwMDI4OTI3MjAzLTljZDI3YTA2OGY2ZWY1NTg2M2RmN2UyZGIxOTI4Y2IwMGI4Mzg5MWFlZTZhYTQzZWI5NDVjMGE3ZTQ5OTJjNDA)
+# ngx-YouTube-Player
+[![build-url][build-url-svg]][build-url]
+[![Dependencies][dependencies]][dependencies-url]
+[![Dev Dependencies][dev-dependencies]][dev-dependencies-url]
 
-# Echoes Player - Angular Version (2nd Generation)
+> YouTube player app built with Angular 7 (latest 7.1.4).
 
-Echoes is a great youtube player developed by [Oren Farhi](http://orizens.com).
-It's fun & easy to listen or watch videos from youtube with Echoes.
-What if youtube was designed to be used as music player?
-This repository is an implementation of Echoes Player with Angular (2nd genration)- It's still a work in progress aimed at learning and experimenting Angular (2nd generation).
+[Demo](https://samirhodzic.github.io/ngx-youtube-player) (Updated: 06/01/2019)
 
-Echoes Player is also available as a [Chrome Application](https://chrome.google.com/webstore/detail/echoes-player/aaenpaopfebcmdaegggjbkhaedlbbkde)
+## Quickstart
 
-It can be regarded as the Media Player experience for youtube listening pleasure.
+**Note**: Require Node 4+ together with Npm 3+, also be sure to install
 
-<p align="center">
-  <a href="http://echoesplayer.com" target="_blank">
-    <img src="https://user-images.githubusercontent.com/878660/53698116-72b76d80-3da6-11e9-82be-f185c1951cf9.png" alt="Webpack, Angular, ngrx, bootstrap" width="75%"/>
-  </a>
-</p>
+**1- Install [Angular-CLI](https://github.com/angular/angular-cli) (latest 7.1.4) :**
 
-## Angular Consulting Services at Orizens
+```bash
+$ npm install -g @angular/cli@latest
+```
 
-I'm a Senior Javascript Engineer & A Front End Consultant.
-My services include:
+**2- Clone the project:**
 
-* consulting to companies and startups on how to approach code in their projects and keep it maintainable.
-* I provide project bootstrapping and development - while afterwards, I integrate it on site and guide the team on it.
+```bash
+$ git clone https://github.com/SamirHodzic/ngx-youtube-player
+$ cd ngx-youtube-player
+```
 
-[Contact Me Here](http://orizens.com/contact)
+**3- Install the npm packages described in the package.json :**
 
-  <a href="http://orizens.com" target="_blank">
-    <img src="https://cloud.githubusercontent.com/assets/878660/23353771/d0adbd12-fcd6-11e6-96be-7a236f8819d9.png" alt="Webpack and Angular" width="20%"/>
-  </a>
+```bash
+$ npm install
+```
 
-# Tech Stack
+**4- Transpile typescript into javascript, host the app and monitor the changes :**
 
-## Included @ngrx solutions:
+```bash
+$ ng serve
+```
 
-* [ngrx/store](https://github.com/ngrx/platform/blob/master/docs/store/README.md) - State Management a la "[Redux](https://github.com/reactjs/redux)" based on RxJs
-* [ngrx/effects](https://github.com/ngrx/platform/blob/master/docs/effects/README.md) - Side Effects layer for ngrx/store
-* ~[ngrx/router-store](https://github.com/ngrx/platform/blob/master/docs/router-store/README.md) - Bindings to connect the Angular Router to @ngrx/store~
-* [ngrx-store-localstorage](https://github.com/btroncone/ngrx-store-localstorage) - local sotrage support for ngrx/store
-* [ngrx/store-devtools](https://github.com/ngrx/platform/blob/master/docs/store-devtools/README.md) - a connector to [redux devtool](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en-US) for chrome
+Visit http://localhost:4200 and enjoy!
 
-## Included Technologies & Libraries
+## Dependencies
+- [Angular](https://angular.io/) with [Typescript](https://www.typescriptlang.org/)
+- [Angular CLI](https://cli.angular.io/)
+- [Material Design Lite](https://github.com/google/material-design-lite/)
 
-* [Angular](http://angular.io)
-* [Angular CLI](https://cli.angular.io/)
-* [@ngrx Platform](https://github.com/ngrx/platform)
-* Bootstrap v3.x (SASS, selected modules)
-* Typescript (latest)
-* ECMAscript latest
+## Features
+- Play music while searching
+- Extended controls
+- Shuffle/Repeat options for your playlists
+- Browser notifications when new song is going to start
+- Different type for video displaying
+- Create local playlist without authorization
+- Simple Import/Export playlists as JSON
 
-# EchoesPlayer
+## TODO
+- ~~'Now playing' when video is minimized~~
+- ~~Update UI to be fully responsive for mobile/tablet~~
+- ~~Browser notification interface when new song is going to start~~
+- Save multiple playlists and switch between them
+- Write tests
+- ...
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 
-## Development server
-
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
-
-## Build
-
-Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-### Build for Production
-
-Run `npm run build:prod` to build the project minified for production with AOT.
-
-## Configure api keys
-
-Echoes use environment variables to integrate Google Analytics, youtube data api key and youtube client id for authorization.
-These defiend as template variables, and are replaced after a successfull build with build-env.js.
-
-### Youtube Keys
-
-Generate your own keys via [google's console](https://console.cloud.google.com/apis/credentials)
-Required Keys are:  
-`API Key`  
-`OAuth client ID`
-
-### Analytics Key (Optional)
-
-The key is the project ID usually can be retreived from the analytics Admin interface. it exist as part of the "script" to paste in your html file.
-
-## Running unit tests
-
-Run `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io).  
-Run `npm run test:ci` to execute the unit tests only **Once**
-
-## Running end-to-end tests
-
-Run `npm run e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-# Bundle analyze explorer
-
-[look at issue](https://github.com/angular/angular-cli/issues/4172)
-
-1.  make sure `npm i source-map-explorer -g`
-1.  `ng build --prod --aot --sm` (the sourcemap is for later steps)
-1.  `cd dist && source-map-explorer A-FILE-WITH-HASH.js`
+[dependencies]: https://david-dm.org/samirhodzic/ngx-youtube-player.svg
+[dependencies-url]: https://david-dm.org/samirhodzic/ngx-youtube-player
+[dev-dependencies]: https://david-dm.org/samirhodzic/ngx-youtube-player/dev-status.svg
+[dev-dependencies-url]: https://david-dm.org/samirhodzic/ngx-youtube-player?type=dev
+[build-url]: https://travis-ci.org/SamirHodzic/ngx-youtube-player
+[build-url-svg]: https://travis-ci.org/SamirHodzic/ngx-youtube-player.svg?branch=master
