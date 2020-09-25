@@ -4,6 +4,7 @@
 
 .mdl-textfield__input {
   border-bottom: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 20px;
 }
 
 .mdl-textfield__label {
