@@ -33,6 +33,9 @@
     "@angular/cli": "^14.2.3",
     "@angular/compiler-cli": "^14.2.2",
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "eslint": "^8.23.1",
     "ts-node": "^4.0.0",
     "typescript": "~4.6.4"
   }
