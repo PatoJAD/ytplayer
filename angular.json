@@ -74,9 +74,7 @@
   },
   "defaultProject": "ngx-youtube-player",
   "cli": {
-    "warnings": {
-      "typescriptMismatch": false
-    }
+    "warnings": {}
   },
   "schematics": {
     "@schematics/angular:component": {

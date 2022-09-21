@@ -10,6 +10,9 @@
     ],
     "curly": true,
     "eofline": true,
+    "deprecation": {
+      "severity": "warning"
+    },
     "forin": true,
     "indent": [
       true,
