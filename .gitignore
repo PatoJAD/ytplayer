@@ -24,7 +24,7 @@ npm-debug.log
 testem.log
 /typings
 /src/app/lib
-
+.angular/
 
 # e2e
 /e2e/*.js
