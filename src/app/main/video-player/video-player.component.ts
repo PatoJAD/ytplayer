@@ -1,4 +1,6 @@
-import { Component, Input, AfterContentInit, Output, EventEmitter } from '@angular/core';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-this-alias */
+import { Component, AfterContentInit, Output, EventEmitter } from '@angular/core';
 import { YoutubePlayerService } from '../../shared/services/youtube-player.service';
 import { NotificationService } from '../../shared/services/notification.service';
 import { BrowserNotificationService } from '../../shared/services/browser-notification.service';
@@ -39,8 +41,8 @@ export class VideoPlayerComponent implements AfterContentInit {
   }
 
   ngAfterContentInit() {
-    let doc = window.document;
-    let playerApi = doc.createElement('script');
+    const doc = window.document;
+    const playerApi = doc.createElement('script');
     playerApi.type = 'text/javascript';
     playerApi.src = 'https://www.youtube.com/iframe_api';
     doc.body.appendChild(playerApi);
@@ -53,8 +55,8 @@ export class VideoPlayerComponent implements AfterContentInit {
     this.superMinPlayer = false;
     this.fullscreenActive = !this.fullscreenActive;
 
-    let width = this.fullscreenActive ? window.innerWidth - 70 : 440;
-    let height = this.fullscreenActive ? window.innerHeight - 120 : 250;
+    const width = this.fullscreenActive ? window.innerWidth - 70 : 440;
+    const height = this.fullscreenActive ? window.innerHeight - 120 : 250;
     this.youtubePlayer.resizePlayer(width, height);
   }
 
@@ -111,20 +113,20 @@ export class VideoPlayerComponent implements AfterContentInit {
   }
 
   importPlaylistAction(): void {
-    let import_button = document.getElementById('import_button');
+    const import_button = document.getElementById('import_button');
     import_button.click();
   }
 
   handleInputChange(e: any): void {
-    let file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
+    const file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
 
     if (file.name.split('.').pop() !== 'json') {
       this.notificationService.showNotification('File not supported.');
       return;
     }
 
-    let reader = new FileReader();
-    let me = this;
+    const reader = new FileReader();
+    const me = this;
 
     reader.readAsText(file);
     reader.onload = function (ev) {

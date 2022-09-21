@@ -104,6 +104,7 @@
   .playlist {
     width: 0;
   }
+
   .playlist.opened {
     width: 40%;
     max-width: 40%;

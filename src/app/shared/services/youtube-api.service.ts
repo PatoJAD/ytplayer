@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/toPromise';
@@ -24,12 +25,12 @@ export class YoutubeApiService {
 
     return this.http.get<SearchListResponse>(url)
       .map(response => {
-        let jsonRes = response;
-        let res = jsonRes['items'];
+        const jsonRes = response;
+        const res = jsonRes['items'];
         this.lastQuery = query;
         this.nextToken = jsonRes['nextPageToken'] ? jsonRes['nextPageToken'] : undefined;
 
-        let ids = [];
+        const ids = [];
 
         res.forEach((item) => {
           ids.push(item.id.videoId);
@@ -46,10 +47,10 @@ export class YoutubeApiService {
 
     return this.http.get<SearchListResponse>(url)
       .map(response => {
-        let jsonRes = response;
-        let res = jsonRes['items'];
+        const jsonRes = response;
+        const res = jsonRes['items'];
         this.nextToken = jsonRes['nextPageToken'] ? jsonRes['nextPageToken'] : undefined;
-        let ids = [];
+        const ids = [];
 
         res.forEach((item) => {
           ids.push(item.id.videoId);

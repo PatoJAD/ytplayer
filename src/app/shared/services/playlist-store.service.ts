@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { Injectable } from '@angular/core';
 
 @Injectable()
@@ -25,13 +28,13 @@ export class PlaylistStoreService {
   }
 
   public addToPlaylist(video: Object): void {
-    let store = this.parse();
+    const store = this.parse();
     store.playlists.push(video);
     localStorage.setItem(this.ngxYTPlayer, JSON.stringify(store));
   }
 
   public removeFromPlaylist(video: any): void {
-    let store = this.parse();
+    const store = this.parse();
     store.playlists = store.playlists.filter(item => item.id !== video.id);
     localStorage.setItem(this.ngxYTPlayer, JSON.stringify(store));
   }
@@ -45,7 +48,7 @@ export class PlaylistStoreService {
   }
 
   public importPlaylist(videos: any): void {
-    let store = this.parse();
+    const store = this.parse();
     store.playlists = videos;
     localStorage.setItem(this.ngxYTPlayer, JSON.stringify(store));
   }

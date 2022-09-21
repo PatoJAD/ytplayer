@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Directive, ElementRef, Input, Output, EventEmitter } from '@angular/core';
 
 @Directive({

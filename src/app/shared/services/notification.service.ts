@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { Injectable } from '@angular/core';
 
 @Injectable()
@@ -7,8 +8,8 @@ export class NotificationService {
   constructor() { }
 
   public showNotification(message: string): void {
-    let notification = document.querySelector('.mdl-js-snackbar');
-    let data = {
+    const notification = document.querySelector('.mdl-js-snackbar');
+    const data = {
       message: message,
       timeout: this.timeoutDuration
     };

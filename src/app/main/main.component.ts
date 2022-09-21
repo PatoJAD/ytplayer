@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, AfterViewInit } from '@angular/core';
 import { YoutubeApiService } from '../shared/services/youtube-api.service';
 import { YoutubePlayerService } from '../shared/services/youtube-player.service';
@@ -50,10 +52,10 @@ export class MainComponent implements AfterViewInit {
       this.videoPlaylist.push(video);
       this.playlistService.addToPlaylist(video);
 
-      let inPlaylist = this.videoPlaylist.length - 1;
+      const inPlaylist = this.videoPlaylist.length - 1;
 
       setTimeout(() => {
-        let topPos = document.getElementById(this.videoPlaylist[inPlaylist].id).offsetTop;
+        const topPos = document.getElementById(this.videoPlaylist[inPlaylist].id).offsetTop;
         this.playlistElement.scrollTop = topPos - 100;
       });
     }
@@ -111,7 +113,7 @@ export class MainComponent implements AfterViewInit {
   }
 
   playPrevNext(value): void {
-    let current = this.youtubePlayer.getCurrentVideo();
+    const current = this.youtubePlayer.getCurrentVideo();
     let inPlaylist;
 
     this.videoPlaylist.forEach((video, index) => {
@@ -122,9 +124,9 @@ export class MainComponent implements AfterViewInit {
 
     // if-else hell
     if (inPlaylist !== undefined) {
-      let topPos = document.getElementById(this.videoPlaylist[inPlaylist].id).offsetTop;
+      const topPos = document.getElementById(this.videoPlaylist[inPlaylist].id).offsetTop;
       if (this.shuffle) {
-        let shuffled = this.videoPlaylist[this.youtubePlayer.getShuffled(inPlaylist, this.videoPlaylist.length)];
+        const shuffled = this.videoPlaylist[this.youtubePlayer.getShuffled(inPlaylist, this.videoPlaylist.length)];
         this.youtubePlayer.playVideo(shuffled.id, shuffled.snippet.title);
         this.playlistElement.scrollTop = document.getElementById(shuffled.id).offsetTop - 100;
       } else {
@@ -169,9 +171,9 @@ export class MainComponent implements AfterViewInit {
       return;
     }
 
-    let data = JSON.stringify(this.videoPlaylist);
-    let a = document.createElement('a');
-    let file = new Blob([data], { type: 'text/json' });
+    const data = JSON.stringify(this.videoPlaylist);
+    const a = document.createElement('a');
+    const file = new Blob([data], { type: 'text/json' });
 
     a.href = URL.createObjectURL(file);
     a.download = 'playlist.json';

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Component, Input } from '@angular/core';
 import { YoutubePlayerService } from '../../shared/services/youtube-player.service';
 import { PlaylistStoreService } from '../../shared/services/playlist-store.service';
@@ -44,7 +46,7 @@ export class VideosPlaylistComponent {
   }
 
   playNextVideo(): void {
-    let current = this.youtubePlayer.getCurrentVideo();
+    const current = this.youtubePlayer.getCurrentVideo();
     let inPlaylist;
 
     if (this.repeat) {
@@ -59,10 +61,10 @@ export class VideosPlaylistComponent {
     });
 
     if (inPlaylist !== undefined) {
-      let topPos = document.getElementById(this.videoPlaylist[inPlaylist].id).offsetTop;
-      let playlistEl = document.getElementById('playlist');
+      const topPos = document.getElementById(this.videoPlaylist[inPlaylist].id).offsetTop;
+      const playlistEl = document.getElementById('playlist');
       if (this.shuffle) {
-        let shuffled = this.videoPlaylist[this.youtubePlayer.getShuffled(inPlaylist, this.videoPlaylist.length)];
+        const shuffled = this.videoPlaylist[this.youtubePlayer.getShuffled(inPlaylist, this.videoPlaylist.length)];
         this.youtubePlayer.playVideo(shuffled.id, shuffled.snippet.title);
         playlistEl.scrollTop = document.getElementById(shuffled).offsetTop - 100;
       } else {

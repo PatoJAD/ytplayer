@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable } from '@angular/core';
 
-let _window: any = window;
+const _window: any = window;
 
 @Injectable()
 export class BrowserNotificationService {
@@ -31,7 +33,7 @@ export class BrowserNotificationService {
     }
 
     Notification.requestPermission((status) => {
-      let n = new Notification('Now playing', {
+      const n = new Notification('Now playing', {
         body: name,
         icon: 'assets/logo_git.png'
       });
