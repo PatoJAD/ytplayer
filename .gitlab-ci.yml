@@ -1,13 +1,12 @@
-image: node:12-alpine
+image: node:18.9.0
 pages:
   stage: deploy
   script:
-  script:
-  - npm install -g @angular/cli
-  - npm install
-  - ng build
+    - npm install -g @angular/cli
+    - npm install
+    - ng build
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master

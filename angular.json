@@ -47,14 +47,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-youtube-player:build"
+            "browserTarget": "ytplayer:build"
           },
           "configurations": {}
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-youtube-player:build"
+            "browserTarget": "ytplayer:build"
           }
         },
         "lint": {
@@ -66,7 +66,7 @@
         }
       }
     },
-    "ngx-youtube-player-e2e": {
+    "ytplayer-e2e": {
       "root": "e2e",
       "sourceRoot": "e2e",
       "projectType": "application"
