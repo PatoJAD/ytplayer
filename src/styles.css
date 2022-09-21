@@ -1,5 +1,5 @@
-body {
-  background-color: #1F1F1F;
+body{
+  background: var(--bg-site-2);
 }
 
 .loader {
@@ -18,8 +18,8 @@ body {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  border: 0.2rem solid rgba(217, 30, 24, 0.5);
-  border-top-color: rgb(52, 73, 94);
+  border: 0.2rem solid var(--site-color);
+  border-top-color: vat(--text-color);
   -webkit-animation: spin 1s infinite linear;
   animation: spin 1s infinite linear;
 }
@@ -61,11 +61,11 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #FF0000;
+  background: var(--site-color);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--text-color);
 }
