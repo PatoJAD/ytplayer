@@ -6,7 +6,7 @@
       [ngStyle]="{'background': '#000 url(' + video.snippet.thumbnails.default.url + ') center center no-repeat', 'background-size': '100%'}">
       <span class="no-in-playlist">{{ i + 1 }}</span>
       <span class="video-duration">{{ video.contentDetails.duration | videoDuration }}</span>
-      <i class="material-icons delete-from-playlist" (click)="removeFromPlaylist(video)">cancel</i>
+      <em class="fa fa-ban delete-from-playlist" aria-hidden="true" (click)="removeFromPlaylist(video)"></em>
     </div>
 
     <div class="opened-item-info" [ngClass]="{'closed': !playlistToggle}" *ngIf="playlistNames">
@@ -19,7 +19,7 @@
       <i class="material-icons">block</i>
     </div>
     <div class="opened-item-info" [ngClass]="{'closed': !playlistToggle}" *ngIf="playlistNames">
-      La Playlist esta Listo
+      La Playlist esta Vacia
     </div>
   </div>
 

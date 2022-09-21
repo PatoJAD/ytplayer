@@ -1,11 +1,11 @@
 .playlist {
-  height: calc(100% - 138px);
+  height: calc(100vh - 165px);
   width: 5%;
   max-width: 70px;
   position: fixed;
-  top: 74px;
+  top: 110px;
   right: 0;
-  background-color: rgba(255, 0, 0, 0.6);
+  background-color: var(--bg-site-g) !important;
   overflow-x: hidden;
   transition: 0.1s;
   box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, .14), -2px 3px 1px -2px rgba(0, 0, 0, .2), -2px 1px 5px 0 rgba(0, 0, 0, .12);
@@ -14,18 +14,17 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 20px;
-  margin: 5px;
+  border-radius: 0;
 }
 
 .playlist.opened {
+  top: 112px;
   width: 25%;
   max-width: 25%;
   z-index: 993;
-  height: calc(100% - 138px);
+  height: calc(100vh - 165px);
   box-shadow: none;
-  border-radius: 20px;
-  margin: 5px;
+  border-radius: 0;
 }
 
 .playlist-thumbnail {
@@ -35,11 +34,11 @@
   margin: 5px;
   display: inline-block;
   position: relative;
-  border-radius: 20px;
+  border-radius: var(--site-radius);
 }
 
 .playist-item.playing {
-  background: rgba(196, 48, 43, 0.95);
+  background: var(--site-color);
 }
 
 .playist-item-empty {
@@ -56,8 +55,9 @@
 }
 
 .playist-item:hover {
-  background: rgba(196, 48, 43, 0.5);
+  background: var(--site-color);
   cursor: pointer;
+  color: #fff;
 }
 
 .playist-item:hover .delete-from-playlist {
@@ -65,12 +65,12 @@
 }
 
 .no-in-playlist {
-  color: #fff;
+  color: var(--text-color);
   text-shadow: 2px 2px 2px #000;
 }
 
 .video-duration {
-  color: #fff;
+  color: var(--text-color);
   text-shadow: 2px 2px 2px #000;
   position: absolute;
   bottom: -4px;
@@ -80,7 +80,7 @@
 
 .opened-item-info {
   display: inline-block;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-color);
   position: absolute;
   left: 70px;
   margin-top: 8px;
@@ -95,7 +95,7 @@
   display: none;
   bottom: 0;
   right: 0;
-  color: #f44542;
+  color: var(--site-color);
   background-color: rgba(0, 0, 0, 0.65);
   font-size: 16px;
 }
