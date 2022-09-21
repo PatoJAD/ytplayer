@@ -1,21 +1,7 @@
-.mdl-layout-title {
-  margin-right: 10px;
-}
-
-.mdl-layout-title>img {
-  height: 35px;
-}
-
-.mdl-layout__header {
-  height: 64px;
-  border-radius: 20px;
-  width: auto;
-  margin: 10px;
-  background-color: #FF0000;
-}
-
 .mdl-layout__content {
+  top: 120px;
   width: calc(95% - 10px);
+  max-height: calc(100vh - 190px);
 }
 
 .mdl-layout__header-row {
@@ -29,7 +15,7 @@
 }
 
 .mdl-textfield__input {
-  border-radius: 20px;
+  border-radius: var(--site-radius);
 }
 
 .blur-main-playlist-opened {
@@ -57,12 +43,12 @@
 @media (max-width: 1150px) {
   .mdl-layout__content {
     width: 100%;
-    border-radius: 20px;
+    border-radius: var(--site-radius);
   }
 
   .yt-player,
   .ytp-cued-thumbnail-overlay {
     width: 100px;
-    border-radius: 20px;
+    border-radius: var(--site-radius);
   }
 }

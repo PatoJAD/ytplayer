@@ -1,22 +1,11 @@
-.mdl-textfield--floating-label.is-focused>.mdl-textfield__label {
-  color: #fff;
+#query {
+  min-width: 300px;
+  margin: auto;
 }
 
-.mdl-textfield__input {
-  border-bottom: 1px solid rgba(255, 255, 255, .12);
-  border-radius: 20px;
-}
-
-.mdl-textfield__label {
-  color: rgba(255, 255, 255, .26);
-}
-
-.mdl-textfield__label:after {
-  background-color: #fff;
-}
-
-@media (max-width: 750px) {
-  .mdl-textfield {
-    width: 140px;
-  }
+#query-btn {
+  padding: 18px;
+  background: var(--site-color);
+  border-radius: var(--site-radius);
+  border-color: var(--site-color);
 }
