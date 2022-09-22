@@ -20,6 +20,7 @@ import { VideoDurationPipe } from './shared/pipes/video-duration.pipe';
 import { VideoLikesViewsPipe } from './shared/pipes/video-likes-views.pipe';
 import { VideoNamePipe } from './shared/pipes/video-name.pipe';
 import { LazyScrollDirective } from './shared/directives/lazy-scroll/lazy-scroll.directive';
+import { ThemeSelectorComponent } from './main/theme-selector/theme-selector.component';
 
 @NgModule({
   imports: [
@@ -40,7 +41,8 @@ import { LazyScrollDirective } from './shared/directives/lazy-scroll/lazy-scroll
     VideoLikesViewsPipe,
     VideoNamePipe,
 
-    LazyScrollDirective
+    LazyScrollDirective,
+     ThemeSelectorComponent
   ],
   bootstrap: [
     AppComponent
