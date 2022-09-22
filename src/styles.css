@@ -57,13 +57,13 @@ body{
 /* Track */
 ::-webkit-scrollbar-track {
   background: var(--bg-site-g);
-  border-radius: var(--site-redius);
+  border-radius: var(--site-radius);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--site-color);
-  border-radius: var(--site-redius);
+  border-radius: var(--site-radius);
 }
 
 /* Handle on hover */

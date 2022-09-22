@@ -6,15 +6,15 @@
       <div class="video-info-block">
         <div class="video-informations">
           <span style="float: left;">
-            <i class="material-icons">thumb_up</i>
+            <em class="fa fa-thumbs-up" aria-hidden="true"></em>
             {{ video.statistics?.likeCount | videoLikesViews }}
           </span>
           <span style="margin-left: 10px;">
-            <i class="material-icons">remove_red_eye</i>
+            <em class="fa fa-eye" aria-hidden="true"></em>
             {{ video.statistics?.viewCount | videoLikesViews }}
           </span>
           <span style="margin-left: 10px; float: right;">
-            <i class="material-icons">access_time</i>
+            <em class="fa fa-clock-o" aria-hidden="true"></em>
             {{ video.contentDetails?.duration | videoDuration }}
           </span>
         </div>
@@ -25,11 +25,11 @@
         </div>
       </div>
       <div class="video-play-button">
-        <i class="material-icons">play_circle_filled</i>
+        <em class="fa fa-play-circle" aria-hidden="true"></em>
       </div>
     </div>
     <div class="mdl-card__supporting-text">
-      <i (click)="addToPlaylist(video)" class="material-icons">playlist_add</i>
+      <em (click)="addToPlaylist(video)" class="material-icons">playlist_add</em>
     </div>
   </div>
 </div>

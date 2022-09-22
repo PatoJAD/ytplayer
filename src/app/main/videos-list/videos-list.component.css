@@ -13,8 +13,8 @@
 .demo-card-square.mdl-card {
   height: 210px;
   width: 100%;
-  background: #FF0000;
-  border-radius: 20px;
+  background: var(--site-color);
+  border-radius: var(--site-radius);
 }
 
 .custom-cell.mdl-cell--2-col {
@@ -40,7 +40,7 @@
   -ms-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  background: #FF0000;
+  background: var(--site-color);
 }
 
 .mdl-card--expand:hover {
@@ -53,10 +53,10 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   padding: 6px 2px 2px 2px;
-  color: rgb(255, 255, 255);
+  color: #FFF;
   text-align: right;
   width: 97%;
-  background: #FF0000;
+  background: var(--site-color);
 }
 
 .mdl-card__supporting-text .material-icons {
@@ -73,6 +73,8 @@
   height: 40px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .video-info-block {
@@ -84,6 +86,8 @@
   height: 30px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .video-informations {
@@ -103,12 +107,12 @@
   margin: auto;
 }
 
-.video-play-button i {
+.video-play-button em {
   font-size: 50px;
   visibility: hidden;
 }
 
-.mdl-card--expand:hover .video-play-button i {
+.mdl-card--expand:hover .video-play-button em {
   visibility: visible;
 }
 
