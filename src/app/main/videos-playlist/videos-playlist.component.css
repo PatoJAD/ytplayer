@@ -49,7 +49,7 @@
   text-align: center;
 }
 
-.playist-item-empty i {
+.playist-item-empty em {
   margin-top: 10px;
   font-size: 35px;
 }

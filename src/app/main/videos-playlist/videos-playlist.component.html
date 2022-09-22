@@ -16,7 +16,7 @@
 
   <div class="playist-item-empty" *ngIf="!videoPlaylist.length">
     <div class="playlist-thumbnail" [ngStyle]="{'background': '#000'}">
-      <i class="material-icons">block</i>
+      <em class="fa fa-ban" aria-hidden="true"></em>
     </div>
     <div class="opened-item-info" [ngClass]="{'closed': !playlistToggle}" *ngIf="playlistNames">
       La Playlist esta Vacia
